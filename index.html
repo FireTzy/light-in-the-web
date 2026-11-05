@@ -6,30 +6,25 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 body{background:#FDEBC8}input{display:none}
-#login{position:fixed;inset:0;z-index:999;overflow-y:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;background:#000}
-#login::before{content:"";position:fixed;inset:0;background:url('background.jpg') center/cover no-repeat;filter:brightness(.4) blur(1px);z-index:0}
-#login>*{position:relative;z-index:2}
+#login{position:fixed;inset:0;z-index:999;overflow-y:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;background:url('background.jpg') center/cover no-repeat}
 #loggedin:checked~#login{display:none}
 #app{display:none;background:#FDEBC8;min-height:100vh}
 #loggedin:checked~#app{display:block}
-.welcome{text-align:center;color:#fff;margin-bottom:14px;background:rgba(0,0,0,.78);padding:16px 20px;border-radius:14px;width:92%;max-width:360px}
-.una{font-style:italic;font-size:22px}.light{font-family:Georgia,serif;font-size:32px;font-weight:700;color:#FFE9A8;margin-top:6px}
-.login-card{background:#fff;width:92%;max-width:340px;padding:20px;border-radius:14px;text-align:center}
-.hl{background:#FEF3C7;padding:3px 8px;border-radius:6px;color:#7C2D12}
-.login-card .sub{font-size:11px;color:#444;margin:8px 0 10px}
-.login-card label{display:block;text-align:left;font-size:11px;font-weight:700;margin-bottom:3px}
-.login-card input{display:block;width:100%;padding:10px;margin-bottom:8px;border:1px solid #ddd;border-radius:7px;background:#eef2f7}
-.login-btn{display:flex!important;justify-content:center!important;align-items:center!important;text-align:center!important;width:100%;padding:11px;background:#ff6b00;color:#fff;border-radius:8px;font-weight:700;cursor:pointer}
-.links{font-size:11px;margin-top:11px;line-height:1.8}.links a{color:#d35400;font-weight:700}
-.verse{margin-top:14px;text-align:center;color:#fff;font-size:12px;padding:12px;background:rgba(0,0,0,.75);border-radius:10px;width:92%;max-width:340px}.verse b{display:block;color:#FFE9A8;margin-top:4px}
+.login-card{background:rgba(255,255,255,.96);width:92%;max-width:420px;padding:28px 24px;border-radius:18px;text-align:center;box-shadow:0 15px 30px rgba(0,0,0,.35)}
+.hl{background:#FEF3C7;padding:4px 10px;border-radius:6px;color:#7C2D12;font-size:22px}
+.login-card .sub{font-size:13px;color:#444;margin:10px 0 14px}
+.login-card label{display:block;text-align:left;font-size:13px;font-weight:700;margin-bottom:4px}
+.login-card input{display:block;width:100%;padding:13px;margin-bottom:12px;border:1px solid #ddd;border-radius:9px;background:#eef2f7;font-size:14px}
+.login-btn{display:block !important;width:100% !important;padding:14px !important;background:#ff6b00 !important;color:#fff !important;border-radius:9px !important;font-weight:800 !important;font-size:16px !important;text-align:center !important;cursor:pointer}
+.links{font-size:12px;margin-top:14px;line-height:1.8}.links a{color:#d35400;font-weight:700}
+.verse{margin-top:14px;text-align:center;color:#fff;font-size:13px;line-height:1.5;padding:12px;background:rgba(0,0,0,.55);border-radius:12px;width:92%;max-width:420px;text-shadow:0 1px 4px #000}.verse b{display:block;color:#FFE9A8;margin-top:4px}
 header{background:#92400E;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
 .menu-wrap{position:relative}.menu-btn{background:#9A3412;color:#fff;padding:8px 14px;border-radius:8px;font-weight:700;cursor:pointer;display:block}
 .menu{display:none;position:absolute;right:0;top:42px;width:220px;flex-direction:column;padding:10px;gap:6px;background:#FFFBEB;border-radius:0 0 10px 10px;box-shadow:0 10px 20px rgba(0,0,0,.25)}
 .menu-wrap:hover .menu,.menu-wrap:focus-within .menu,.menu:hover{display:flex}
 .menu label{background:#F97316;color:#fff;padding:11px;border-radius:8px;font-weight:700;cursor:pointer;border-left:4px solid #7C2D12}
-.hero{position:relative;text-align:center;padding:80px 20px;color:#fff;background:#000;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:url('background.jpg') center/cover no-repeat;filter:brightness(.4)}
-.hero>*{position:relative;z-index:2}.hero h1{font-size:32px}.hero p{margin-top:12px;font-weight:700}
+.hero{position:relative;text-align:center;padding:80px 20px;color:#fff;background:url('background.jpg') center/cover no-repeat}
+.hero h1{font-size:32px;text-shadow:0 4px 15px #000}.hero p{margin-top:12px;font-weight:700;text-shadow:0 2px 8px #000}
 .explore{width:92%;max-width:1200px;margin:0 auto;padding:35px 20px;text-align:center}
 .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:20px}
 .card5{background:#FFFBEB;padding:24px 12px;border-radius:12px;cursor:pointer}
@@ -43,8 +38,7 @@ header{background:#92400E;color:#fff;padding:14px 16px;display:flex;justify-cont
 .full{grid-column:span 2;text-align:center}
 .faith-box{background:#FFF7ED;border:1px solid #FDE68A;padding:16px;border-radius:12px;text-align:center;margin-top:16px}
 footer{text-align:center;padding:20px;font-size:13px}
-@media(max-width:900px){.grid5{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid5,.grid{grid-template-columns:1fr}.full{grid-column:span 1}}
+@media(max-width:600px){.grid5,.grid{grid-template-columns:1fr}.full{grid-column:span 1}.login-card{width:94%;padding:26px 20px}.hl{font-size:20px}.login-btn{font-size:16px !important}}
 </style>
 </head>
 <body>
@@ -56,7 +50,6 @@ footer{text-align:center;padding:20px;font-size:13px}
 <input type="radio" name="page" id="p-education">
 <input type="radio" name="page" id="p-faith">
 <div id="login">
-<div class="welcome"><div class="una">— Una ang Ginoo —</div><div class="light">Light of the World</div></div>
 <div class="login-card"><h1><span class="hl">Light in the Web</span></h1><p class="sub">Sign in to continue</p><label>Username</label><input placeholder="Enter username"><label>Password</label><input type="password" placeholder="Enter password"><label for="loggedin" class="login-btn">Log In</label><div class="links"><a href="#">Forgot password?</a><br>Don't have an account? <a href="#">Sign up</a></div></div>
 <div class="verse">"Let your light shine before others, that they may see your good deeds and glorify your Father in heaven."<b>— MATTHEW 5:16</b></div>
 </div>
