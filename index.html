@@ -6,20 +6,20 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 body{background:#000}input{display:none}
-#login{position:fixed;inset:0;z-index:2;overflow-y:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:14px;background-image:url('background.jpg'),url('Background.jpg'),url('background.JPG'),url('background.webp'),url('background.png');background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#92400E}
+#login{position:fixed;inset:0;z-index:2;overflow-y:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:20px;background-image:url('background.jpg'),url('Background.jpg'),url('background.JPG'),url('background.webp'),url('background.png');background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#92400E}
 #loggedin:checked~#login{display:none}
 #app{display:none;background:#FDEBC8;min-height:100vh}
 #loggedin:checked~#app{display:block}
 .welcome{text-align:center;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.7)}
 .una{font-style:italic;font-size:clamp(22px,4vw,34px)}
-.light{font-family:Georgia,serif;font-size:clamp(42px,7.5vw,74px);font-weight:700;line-height:1.05;margin-top:6px;white-space:nowrap}
-.login-card{background:rgba(255,255,255,.96);width:min(92vw,360px);padding:16px 18px;border-radius:14px;text-align:center;box-shadow:0 10px 22px rgba(0,0,0,.30)}
-.hl{display:inline-block;background:#FBBF24;color:#3d2a00 !important;padding:3px 10px;border-radius:6px;font-size:18px;font-weight:800}
-.login-card .sub{font-size:12px;color:#666;margin:7px 0 10px}
-.login-card label{display:block;text-align:left;font-size:12px;font-weight:700;margin-bottom:3px}
-.login-card input{display:block;width:100%;padding:9px;margin-bottom:8px;border:1px solid #ddd;border-radius:7px;background:#eef2f7;font-size:13px}
-.login-btn{display:block !important;width:100% !important;padding:10px !important;background:#ff6b00 !important;color:#fff !important;border-radius:7px !important;font-weight:800 !important;font-size:15px !important;text-align:center !important;cursor:pointer}
-.links{font-size:11px;margin-top:8px;line-height:1.6}.links a{color:#c2410c;font-weight:700}
+.light{font-family:Georgia,serif;font-size:clamp(42px,7.5vw,74px);font-weight:700;line-height:1.05;margin-top:10px;white-space:nowrap}
+.login-card{background:rgba(255,255,255,.96);width:min(92vw,400px);padding:24px 22px;border-radius:16px;text-align:center;box-shadow:0 15px 35px rgba(0,0,0,.35)}
+.hl{display:inline-block;background:#FBBF24;color:#3d2a00 !important;padding:3px 10px;border-radius:6px;font-size:19px;font-weight:800}
+.login-card .sub{font-size:13px;color:#666;margin:10px 0 14px}
+.login-card label{display:block;text-align:left;font-size:13px;font-weight:700;margin-bottom:4px}
+.login-card input{display:block;width:100%;padding:12px;margin-bottom:12px;border:1px solid #ddd;border-radius:8px;background:#eef2f7;font-size:14px}
+.login-btn{display:block !important;width:100% !important;padding:13px !important;background:#ff6b00 !important;color:#fff !important;border-radius:8px !important;font-weight:800 !important;font-size:16px !important;text-align:center !important;cursor:pointer}
+.links{font-size:12px;margin-top:12px;line-height:1.8}.links a{color:#c2410c;font-weight:700}
 .verse{text-align:center;color:#fff;font-size:clamp(11px,2.5vw,14px);line-height:1.6;max-width:460px;text-shadow:0 2px 8px #000}.verse b{display:block;margin-top:5px}
 header{background:#92400E;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
 .menu-wrap{position:relative}.menu-btn{background:#9A3412;color:#fff;padding:9px 16px;border-radius:8px;font-weight:700;cursor:pointer;display:block}
@@ -46,7 +46,7 @@ header{background:#92400E;color:#fff;padding:14px 20px;display:flex;justify-cont
 .faith-box{background:#FFF7ED;border:1px solid #FDE68A;padding:18px;border-radius:12px;text-align:center;margin-top:16px}
 footer{text-align:center;padding:22px;font-size:13px}
 @media(max-width:768px){.grid5{grid-template-columns:1fr 1fr}.light{white-space:normal}}
-@media(max-width:480px){#login{gap:10px;padding:10px}.login-card{width:94vw}.grid5,.grid{grid-template-columns:1fr}.full{grid-column:span 1}}
+@media(max-width:480px){#login{gap:12px;padding:12px}.login-card{width:94vw}.grid5,.grid{grid-template-columns:1fr}.full{grid-column:span 1}}
 </style>
 </head>
 <body>
