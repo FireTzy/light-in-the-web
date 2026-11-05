@@ -6,15 +6,14 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 body{background:#000}input{display:none}
-/* BACKGROUND NA IMG - KITA SA LAPTOP AT CELPON */
 .bg-img{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-#login{position:fixed;inset:0;z-index:2;overflow-y:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px}
+#login{position:fixed;inset:0;z-index:2;overflow-y:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:20px}
 #loggedin:checked~#login{display:none}
 #app{display:none;background:#FDEBC8;min-height:100vh}
 #loggedin:checked~#app{display:block}
-.welcome{text-align:center;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.7),0 1px 4px #000}
+.welcome{text-align:center;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.7),0 1px 4px #000}
 .una{font-style:italic;font-size:clamp(22px,4vw,34px)}
-.light{font-family:Georgia,serif;font-size:clamp(40px,7vw,72px);font-weight:700;line-height:1.1;margin-top:8px;white-space:nowrap}
+.light{font-family:Georgia,serif;font-size:clamp(42px,7.5vw,74px);font-weight:700;line-height:1.05;margin-top:10px;white-space:nowrap}
 .login-card{background:rgba(255,255,255,.96);width:min(92vw,400px);padding:24px 22px;border-radius:16px;text-align:center;box-shadow:0 15px 35px rgba(0,0,0,.35)}
 .hl{font-size:19px;font-weight:800;color:#3d2a00}
 .login-card .sub{font-size:13px;color:#666;margin:6px 0 14px}
@@ -22,16 +21,14 @@ body{background:#000}input{display:none}
 .login-card input{display:block;width:100%;padding:12px;margin-bottom:12px;border:1px solid #ddd;border-radius:8px;background:#eef2f7;font-size:14px}
 .login-btn{display:block !important;width:100% !important;padding:13px !important;background:#ff6b00 !important;color:#fff !important;border-radius:8px !important;font-weight:800 !important;font-size:16px !important;text-align:center !important;cursor:pointer}
 .links{font-size:12px;margin-top:12px;line-height:1.8}.links a{color:#c2410c;font-weight:700}
-.verse{text-align:center;color:#fff;font-size:clamp(11px,2.5vw,14px);line-height:1.6;max-width:460px;text-shadow:0 2px 8px #000,0 1px 3px #000}.verse b{display:block;margin-top:5px}
+.verse{text-align:center;color:#fff;font-size:clamp(11px,2.5vw,14px);line-height:1.6;max-width:460px;text-shadow:0 2px 8px #000}.verse b{display:block;margin-top:5px}
 header{background:#92400E;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
 .menu-wrap{position:relative}.menu-btn{background:#9A3412;color:#fff;padding:9px 16px;border-radius:8px;font-weight:700;cursor:pointer;display:block}
 .menu{display:none;position:absolute;right:0;top:44px;width:230px;flex-direction:column;padding:10px;gap:6px;background:#FFFBEB;border-radius:0 0 12px 12px;box-shadow:0 10px 20px rgba(0,0,0,.25)}
 .menu-wrap:hover .menu,.menu-wrap:focus-within .menu,.menu:hover{display:flex}
 .menu label{background:#F97316;color:#fff;padding:12px;border-radius:8px;font-weight:700;cursor:pointer;border-left:4px solid #7C2D12}
-.hero{position:relative;text-align:center;padding:90px 20px;color:#fff;overflow:hidden}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35);z-index:1}
-.hero>*{position:relative;z-index:2}.hero h1{font-size:clamp(28px,5vw,44px)}.hero p{margin-top:12px;font-weight:700}
+.hero{text-align:center;padding:60px 20px 40px;color:#fff;background:linear-gradient(135deg,#92400E,#F97316,#FBBF24)}
+.hero h1{font-size:clamp(28px,5vw,44px)}.hero p{margin-top:12px;font-weight:700}
 .explore{width:min(94vw,1200px);margin:0 auto;padding:35px 15px;text-align:center}
 .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:20px}
 .card5{background:#FFFBEB;padding:26px 14px;border-radius:14px;cursor:pointer}
@@ -45,8 +42,8 @@ header{background:#92400E;color:#fff;padding:14px 20px;display:flex;justify-cont
 .full{grid-column:span 2;text-align:center}
 .faith-box{background:#FFF7ED;border:1px solid #FDE68A;padding:18px;border-radius:12px;text-align:center;margin-top:16px}
 footer{text-align:center;padding:22px;font-size:13px}
-@media(max-width:768px){.grid5{grid-template-columns:1fr 1fr}.light{white-space:normal}.hero{padding:70px 16px}}
-@media(max-width:480px){#login{gap:12px;padding:12px}.login-card{width:94vw;padding:20px 18px}.grid5,.grid{grid-template-columns:1fr}.full{grid-column:span 1}}
+@media(max-width:768px){.grid5{grid-template-columns:1fr 1fr}.light{white-space:normal}}
+@media(max-width:480px){#login{gap:12px;padding:12px}.login-card{width:94vw}.grid5,.grid{grid-template-columns:1fr}.full{grid-column:span 1}}
 </style>
 </head>
 <body>
@@ -57,7 +54,7 @@ footer{text-align:center;padding:22px;font-size:13px}
 <input type="radio" name="page" id="p-portfolio">
 <input type="radio" name="page" id="p-education">
 <input type="radio" name="page" id="p-faith">
-<img src="background.jpg" class="bg-img">
+<img src="background.webp" class="bg-img">
 <div id="login">
 <div class="welcome"><div class="una">— Una ang Ginoo —</div><div class="light">Light of the World</div></div>
 <div class="login-card"><h1><span class="hl">Light in the Web</span></h1><p class="sub">Sign in to continue</p><label>Username</label><input placeholder="Enter username"><label>Password</label><input type="password" placeholder="Enter password"><label for="loggedin" class="login-btn">Log In</label><div class="links"><a href="#">Forgot password?</a><br>Don't have an account? <a href="#">Sign up</a></div></div>
@@ -66,14 +63,14 @@ footer{text-align:center;padding:22px;font-size:13px}
 <div id="app">
 <header><div><b>✦ Light in the Web</b><br><span>Una ang Ginoo</span></div><div class="menu-wrap" tabindex="0"><span class="menu-btn">☰ Menu</span><nav class="menu"><label for="p-home">🏠 Home</label><label for="p-reflection">📖 Reflection</label><label for="p-community">🫶 Community</label><label for="p-portfolio">✨ Portfolio</label><label for="p-education">🎓 Digital Ethics</label><label for="p-faith">✝️ Faith & Tech</label><label for="loggedin">Logout</label></nav></div></header>
 <main>
-<section id="home" class="page"><div class="hero"><img src="background.jpg" class="hero-img"><h1>Light in the Web – Una ang Ginoo</h1><p>Inspiring student learning through faith, service, and technology</p></div><div class="explore"><h2>Explore Our Pages</h2><div class="grid5"><label class="card5" for="p-reflection"><div class="icon">📖</div><h3>Reflection</h3><p>Journal your faith journey</p></label><label class="card5" for="p-community"><div class="icon">🫶</div><h3>Community</h3><p>Outreach and advocacy</p></label><label class="card5" for="p-portfolio"><div class="icon">✨</div><h3>Portfolio</h3><p>Inspirational works</p></label><label class="card5" for="p-education"><div class="icon">🎓</div><h3>Education</h3><p>Learn topics</p></label><label class="card5" for="p-faith"><div class="icon">✝️</div><h3>Faith & Tech</h3><p>Faith meets innovation</p></label></div></div></section>
+<section id="home" class="page"><div class="hero"><h1>Light in the Web – Una ang Ginoo</h1><p>Inspiring student learning through faith, service, and technology</p></div><div class="explore"><h2>Explore Our Pages</h2><div class="grid5"><label class="card5" for="p-reflection"><div class="icon">📖</div><h3>Reflection</h3><p>Journal your faith journey</p></label><label class="card5" for="p-community"><div class="icon">🫶</div><h3>Community</h3><p>Outreach and advocacy</p></label><label class="card5" for="p-portfolio"><div class="icon">✨</div><h3>Portfolio</h3><p>Inspirational works</p></label><label class="card5" for="p-education"><div class="icon">🎓</div><h3>Education</h3><p>Learn topics</p></label><label class="card5" for="p-faith"><div class="icon">✝️</div><h3>Faith & Tech</h3><p>Faith meets innovation</p></label></div></div></section>
 <section id="reflection" class="page"><div class="container"><h1>Personal Reflection</h1><div class="grid"><div class="card"><h2>Faith</h2><p>Faith inspires kindness online. Before I post, I ask: Una ang Ginoo?</p><span class="tag">Compassion</span></div><div class="card"><h2>Integrity</h2><p>Be truthful online. Never spread fake news.</p><span class="tag">Honesty</span></div><div class="card full"><h2>Digital Citizenship</h2><p>Kindness, privacy, no cyberbullying.</p><span class="tag">Respect</span></div></div><div class="faith-box"><h2>🤔 Reflection</h2><p>Does my post reflect God's light?<br><b>Una ang Ginoo — before I click, I pray.</b></p></div></div></section>
 <section id="community" class="page"><div class="container"><h1>Community Service</h1><div class="grid"><div class="card"><h2>🌱 Environment</h2><p>Clean-Up Drive to care for God's creation.</p><span class="tag">Care for Creation</span></div><div class="card"><h2>❤️ Charity</h2><p>Donation Drive for families in need.</p><span class="tag">Sharing Blessings</span></div><div class="card full"><h2>📢 #BeKindOnline</h2><p>No to cyberbullying. Yes to kindness.</p><span class="tag">Kindness</span></div></div><div class="faith-box"><h2>✝️ Faith in Action</h2><p>"Whatever you did for one of the least of these, you did for me." — Matthew 25:40</p></div></div></section>
 <section id="portfolio" class="page"><div class="container"><h1>Portfolio</h1><div class="grid"><div class="card"><h2>👤 About Me</h2><p>Faith and tech can work together. Light of the World.</p><span class="tag">Una ang Ginoo</span></div><div class="card"><h2>🏆 My Works</h2><p>1. Poster 2. Video 3. Website</p><span class="tag">My Creations</span></div><div class="card"><h2>🎯 Goals</h2><p>Finish school with honesty. Become IT professional.</p><span class="tag">Dream Big</span></div><div class="card"><h2>✨ Values</h2><p>Faith | Integrity | Kindness | Excellence</p><span class="tag">Values</span></div></div><div class="faith-box"><h2>💡 Mission</h2><p>Use technology to glorify God. <b>Light of the World, Una ang Ginoo.</b></p></div></div></section>
 <section id="education" class="page"><div class="container"><h1>Educational Page</h1><div class="grid"><div class="card"><h2>✅ 5 Rules</h2><p>1. Think Before Post 2. Respect Privacy 3. No Plagiarism 4. No Bullying 5. Be Honest</p><span class="tag">5 Rules</span></div><div class="card"><h2>💛 Kindness</h2><p>Comment positive, help classmates.</p><span class="tag">Choose Kindness</span></div><div class="card full"><h2>⚖️ Honesty</h2><p>Don't cheat, don't copy. Use tech to learn.</p><span class="tag">Be Honest</span></div></div><div class="faith-box"><h2>🙏 Promise</h2><p>Think before I post, respect others, tell truth.<br><b>Una ang Ginoo, Light of the World.</b></p></div></div></section>
 <section id="faith" class="page"><div class="container"><h1>Faith and Technology</h1><div class="grid"><div class="card"><h2>📱 Tech Spreads Faith</h2><p>Share Bible verses via Facebook, TikTok, YouTube.</p><span class="tag">Tech for Good</span></div><div class="card"><h2>🌍 Digital Mission</h2><p>Website for devotionals and prayer requests.</p><span class="tag">My Dream</span></div><div class="card full"><h2>🙏 Final Message</h2><p>"Let your light shine." - Matthew 5:16<br>Una ang Ginoo - Light of the World.</p><span class="tag">Una ang Ginoo</span></div></div></div></section>
 </main>
-<footer>© 2026 Light in the Web • Una ang Ginoo • Matthew 5:16</footer>
+<footer>© 2024 Light in the Web • Una ang Ginoo • Matthew 5:16</footer>
 </div>
 </body>
 </html>
