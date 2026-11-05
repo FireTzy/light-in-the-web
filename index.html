@@ -6,39 +6,45 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 body{background:#FDEBC8}input{display:none}
-#login{position:fixed;inset:0;z-index:999;overflow-y:auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;background:url('background.jpg') center/cover no-repeat}
+#login{position:fixed;inset:0;z-index:999;overflow-y:auto;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;background:url('background.jpg') center/cover no-repeat}
 #loggedin:checked~#login{display:none}
 #app{display:none;background:#FDEBC8;min-height:100vh}
 #loggedin:checked~#app{display:block}
-.login-card{background:rgba(255,255,255,.96);width:92%;max-width:420px;padding:28px 24px;border-radius:18px;text-align:center;box-shadow:0 15px 30px rgba(0,0,0,.35)}
-.hl{background:#FEF3C7;padding:4px 10px;border-radius:6px;color:#7C2D12;font-size:22px}
-.login-card .sub{font-size:13px;color:#444;margin:10px 0 14px}
-.login-card label{display:block;text-align:left;font-size:13px;font-weight:700;margin-bottom:4px}
-.login-card input{display:block;width:100%;padding:13px;margin-bottom:12px;border:1px solid #ddd;border-radius:9px;background:#eef2f7;font-size:14px}
-.login-btn{display:block !important;width:100% !important;padding:14px !important;background:#ff6b00 !important;color:#fff !important;border-radius:9px !important;font-weight:800 !important;font-size:16px !important;text-align:center !important;cursor:pointer}
-.links{font-size:12px;margin-top:14px;line-height:1.8}.links a{color:#d35400;font-weight:700}
-.verse{margin-top:14px;text-align:center;color:#fff;font-size:13px;line-height:1.5;padding:12px;background:rgba(0,0,0,.55);border-radius:12px;width:92%;max-width:420px;text-shadow:0 1px 4px #000}.verse b{display:block;color:#FFE9A8;margin-top:4px}
-header{background:#92400E;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
-.menu-wrap{position:relative}.menu-btn{background:#9A3412;color:#fff;padding:8px 14px;border-radius:8px;font-weight:700;cursor:pointer;display:block}
-.menu{display:none;position:absolute;right:0;top:42px;width:220px;flex-direction:column;padding:10px;gap:6px;background:#FFFBEB;border-radius:0 0 10px 10px;box-shadow:0 10px 20px rgba(0,0,0,.25)}
+/* GAYA SA SCREENSHOT - WALANG BLACK BOX */
+.welcome{text-align:center;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.8)}
+.una{font-style:italic;font-size:clamp(20px,4vw,32px);font-weight:500}
+.light{font-family:Georgia,serif;font-size:clamp(38px,7vw,68px);font-weight:700;line-height:1.1;margin-top:8px}
+.login-card{background:rgba(255,255,255,.95);width:min(92vw,400px);padding:24px 22px;border-radius:16px;text-align:center;box-shadow:0 15px 35px rgba(0,0,0,.3)}
+.hl{font-size:19px;font-weight:800;color:#3d2a00}
+.login-card .sub{font-size:13px;color:#666;margin:6px 0 14px}
+.login-card label{display:block;text-align:left;font-size:13px;font-weight:700;margin-bottom:4px;color:#222}
+.login-card input{display:block;width:100%;padding:12px;margin-bottom:12px;border:1px solid #ddd;border-radius:8px;background:#eef2f7;font-size:14px}
+.login-btn{display:block !important;width:100% !important;padding:13px !important;background:#ff6b00 !important;color:#fff !important;border-radius:8px !important;font-weight:800 !important;font-size:16px !important;text-align:center !important;cursor:pointer}
+.links{font-size:12px;margin-top:12px;line-height:1.8}.links a{color:#c2410c;font-weight:700}
+.verse{text-align:center;color:#fff;font-size:clamp(11px,2.5vw,14px);line-height:1.6;max-width:420px;text-shadow:0 2px 8px #000,0 1px 3px #000}.verse b{display:block;margin-top:5px;letter-spacing:1px}
+header{background:#92400E;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.menu-wrap{position:relative}.menu-btn{background:#9A3412;color:#fff;padding:9px 16px;border-radius:8px;font-weight:700;cursor:pointer;display:block}
+.menu{display:none;position:absolute;right:0;top:44px;width:230px;flex-direction:column;padding:10px;gap:6px;background:#FFFBEB;border-radius:0 0 12px 12px;box-shadow:0 10px 20px rgba(0,0,0,.25)}
 .menu-wrap:hover .menu,.menu-wrap:focus-within .menu,.menu:hover{display:flex}
-.menu label{background:#F97316;color:#fff;padding:11px;border-radius:8px;font-weight:700;cursor:pointer;border-left:4px solid #7C2D12}
-.hero{position:relative;text-align:center;padding:80px 20px;color:#fff;background:url('background.jpg') center/cover no-repeat}
-.hero h1{font-size:32px;text-shadow:0 4px 15px #000}.hero p{margin-top:12px;font-weight:700;text-shadow:0 2px 8px #000}
-.explore{width:92%;max-width:1200px;margin:0 auto;padding:35px 20px;text-align:center}
+.menu label{background:#F97316;color:#fff;padding:12px;border-radius:8px;font-weight:700;cursor:pointer;border-left:4px solid #7C2D12}
+.hero{position:relative;text-align:center;padding:90px 20px;color:#fff;background:url('background.jpg') center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.hero>*{position:relative;z-index:2}.hero h1{font-size:clamp(28px,5vw,44px)}.hero p{margin-top:12px;font-weight:700}
+.explore{width:min(94vw,1200px);margin:0 auto;padding:35px 15px;text-align:center}
 .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:20px}
-.card5{background:#FFFBEB;padding:24px 12px;border-radius:12px;cursor:pointer}
+.card5{background:#FFFBEB;padding:26px 14px;border-radius:14px;cursor:pointer}
 .icon{width:68px;height:68px;background:#FDE2A8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 12px}
 .page{display:none}
 #p-home:checked~#app #home,#p-reflection:checked~#app #reflection,#p-community:checked~#app #community,#p-portfolio:checked~#app #portfolio,#p-education:checked~#app #education,#p-faith:checked~#app #faith{display:block}
-.container{width:92%;max-width:900px;margin:0 auto;padding:25px 15px}
+.container{width:min(94vw,900px);margin:0 auto;padding:28px 10px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.card{background:#fff;padding:20px;border-radius:12px;border-left:6px solid #F59E0B}
+.card{background:#fff;padding:22px;border-radius:14px;border-left:6px solid #F59E0B}
 .tag{display:inline-block;background:#FEF3C7;padding:5px 10px;border-radius:15px;font-size:12px;margin-top:10px;font-weight:600}
 .full{grid-column:span 2;text-align:center}
-.faith-box{background:#FFF7ED;border:1px solid #FDE68A;padding:16px;border-radius:12px;text-align:center;margin-top:16px}
-footer{text-align:center;padding:20px;font-size:13px}
-@media(max-width:600px){.grid5,.grid{grid-template-columns:1fr}.full{grid-column:span 1}.login-card{width:94%;padding:26px 20px}.hl{font-size:20px}.login-btn{font-size:16px !important}}
+.faith-box{background:#FFF7ED;border:1px solid #FDE68A;padding:18px;border-radius:12px;text-align:center;margin-top:16px}
+footer{text-align:center;padding:22px;font-size:13px}
+@media(max-width:768px){.grid5{grid-template-columns:1fr 1fr}.hero{padding:70px 16px}}
+@media(max-width:480px){#login{gap:12px;padding:12px}.login-card{width:94vw;padding:20px 18px}.grid5,.grid{grid-template-columns:1fr}.full{grid-column:span 1}}
 </style>
 </head>
 <body>
@@ -50,6 +56,7 @@ footer{text-align:center;padding:20px;font-size:13px}
 <input type="radio" name="page" id="p-education">
 <input type="radio" name="page" id="p-faith">
 <div id="login">
+<div class="welcome"><div class="una">— Una ang Ginoo —</div><div class="light">Light of the World</div></div>
 <div class="login-card"><h1><span class="hl">Light in the Web</span></h1><p class="sub">Sign in to continue</p><label>Username</label><input placeholder="Enter username"><label>Password</label><input type="password" placeholder="Enter password"><label for="loggedin" class="login-btn">Log In</label><div class="links"><a href="#">Forgot password?</a><br>Don't have an account? <a href="#">Sign up</a></div></div>
 <div class="verse">"Let your light shine before others, that they may see your good deeds and glorify your Father in heaven."<b>— MATTHEW 5:16</b></div>
 </div>
@@ -63,7 +70,7 @@ footer{text-align:center;padding:20px;font-size:13px}
 <section id="education" class="page"><div class="container"><h1>Educational Page</h1><div class="grid"><div class="card"><h2>✅ 5 Rules</h2><p>1. Think Before Post 2. Respect Privacy 3. No Plagiarism 4. No Bullying 5. Be Honest</p><span class="tag">5 Rules</span></div><div class="card"><h2>💛 Kindness</h2><p>Comment positive, help classmates.</p><span class="tag">Choose Kindness</span></div><div class="card full"><h2>⚖️ Honesty</h2><p>Don't cheat, don't copy. Use tech to learn.</p><span class="tag">Be Honest</span></div></div><div class="faith-box"><h2>🙏 Promise</h2><p>Think before I post, respect others, tell truth.<br><b>Una ang Ginoo, Light of the World.</b></p></div></div></section>
 <section id="faith" class="page"><div class="container"><h1>Faith and Technology</h1><div class="grid"><div class="card"><h2>📱 Tech Spreads Faith</h2><p>Share Bible verses via Facebook, TikTok, YouTube.</p><span class="tag">Tech for Good</span></div><div class="card"><h2>🌍 Digital Mission</h2><p>Website for devotionals and prayer requests.</p><span class="tag">My Dream</span></div><div class="card full"><h2>🙏 Final Message</h2><p>"Let your light shine." - Matthew 5:16<br>Una ang Ginoo - Light of the World.</p><span class="tag">Una ang Ginoo</span></div></div></div></section>
 </main>
-<footer>© 2024 Light in the Web • Una ang Ginoo • Matthew 5:16</footer>
+<footer>© 2026 Light in the Web • Una ang Ginoo • Matthew 5:16</footer>
 </div>
 </body>
 </html>
